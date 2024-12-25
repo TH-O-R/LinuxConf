@@ -3,14 +3,14 @@
 
 int main(int argc, char *argv[])
 {
-  FILE *nigga = fopen("lol.txt", "w");
+  FILE *fl = fopen("lol.txt", "w");
 
   char msg[] = "\033[H";
   
   for (int i=0; i <= 4; i++) {
-    fprintf(nigga, "%c", msg[i]);
+    fprintf(fl, "%c", msg[i]);
   }
   
-  fclose(nigga);
+  fclose(fl);
   return 0;
 }
