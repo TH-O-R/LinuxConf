@@ -1,8 +1,11 @@
-# Dotfiles
+#NOTE!:
+This repo only servers as my restore point. Anything serious will be put in different repos!
+
+## Dotfiles
 
 This repository contains my dotfiles and configuration files for various Linux utilities and applications. These dotfiles are specifically curated for my system setup, which includes configurations for window managers, terminal utilities, and other software tools.
 
-## Contents
+### Contents
 
 The repository contains the following configuration files and directories:
 
@@ -19,7 +22,7 @@ The repository contains the following configuration files and directories:
 - **Other configuration files**: Other miscellaneous settings and scripts that I use in my environment.
 
 
-### 1. Clone the Repository
+#### 1. Clone the Repository
 
 Clone this repository into your home directory:
 
