@@ -13,7 +13,9 @@ The repository contains the following configuration files and directories:
 - **`~/.config/fasfetch/`**: Configuration files for Fasfetch, a system information fetcher.
 - **`~/.config/kitty/`**: Configuration files for the Kitty terminal emulator.
 - **`~/.config/polybar/`**: Configuration files for Polybar, a status bar.
-- **`~/Projects/`**: Personal project directory (can be adjusted as per your needs).
+- **`~/.config/swaylock`**: Configuration (arguments) for swaylock.
+- **`~/.config/wlogout`**: Configuration files for wlogout used in Hyprland (Wayland).
+- **`~/Projects/`**: Personal project directory.
 - **Other configuration files**: Other miscellaneous settings and scripts that I use in my environment.
 
 
