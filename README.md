@@ -1,5 +1,7 @@
-#NOTE!:
+# NOTE!:
+
 This repo only servers as my restore point. Anything serious will be put in different repos!
+
 
 ## Dotfiles
 
