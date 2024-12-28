@@ -17,6 +17,7 @@ The repository contains the following configuration files and directories:
 - **`~/.config/i3/`**: Configuration files for the i3 window manager.
 - **`~/.config/fasfetch/`**: Configuration files for Fasfetch, a system information fetcher.
 - **`~/.config/kitty/`**: Configuration files for the Kitty terminal emulator.
+- **`~/.config/alacritty/`**: Configuration file for the alacritty terminal emulator.
 - **`~/.config/polybar/`**: Configuration files for Polybar, a status bar.
 - **`~/.config/swaylock`**: Configuration (arguments) for swaylock.
 - **`~/.config/wlogout`**: Configuration files for wlogout used in Hyprland (Wayland).
