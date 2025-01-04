@@ -408,7 +408,7 @@ exec --no-startup-id conky -c ~/.config/i3/system-overview
 # exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arco/arco-wallpaper.jpg &
 # exec --no-startup-id feh --bg-fill ~/.config/hypr/bg/wallpaper.png &
 # exec --no-startup-id feh --bg-fill /home/akuma/.config/hypr/bg/minimal.png &
-exec --no-startup-id feh --bg-fill /home/akuma/Downloads/Hypr-main/bg/Img-13.png &
+exec --no-startup-id feh --bg-fill /home/akuma/.config/i3/bg/Img-13.png &
 
 # for other Arch Linux based distros
 # exec --no-startup-id feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
@@ -624,9 +624,9 @@ bindsym mod1+Shift+u exec --no-startup-id wal -i $(cat $HOME/.config/variety/wal
 
 ################# audio settings                   
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
-bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+' && notify-send Volume: $(pamixer --get-volume)%"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-' && notify-send Volume: $(pamixer --get-volume)%"
+bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle && notify-send MUTE toggle: $(pamixer --get-volume)%"
 # https://github.com/acrisci/playerctl/
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
@@ -641,8 +641,8 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 # bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 # bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
 
 ################# bar toggle                       
 
@@ -729,34 +729,24 @@ mode "$mode_gaps_outer" {
 ################# picom of i3wm                  
 
 # if you want transparency on non-focused windows, ...
-exec_always --no-startup-id picom --config ~/.config/i3/picom.conf --corner-radius 10
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf 
 
 bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
 ################# bar appearance                   
 
     ##START THEMING WM
-    #Theme name : ArcoLinux Gravemind
+    #Theme name : ArcoLinux Nantes
 
     # Window color settings
     # class                 border  backgr. text    indicator
-   client.focused          #3c5beb #3c5bcb #dddddd #3c5bcb
-   client.unfocused        #000000 #000000 #555555 #292d2e
-   client.focused_inactive #000000 #000000 #555555 #292d2e
-   client.placeholder      #000000 #000000 #555555 #292d2e
-   client.urgent           #2f343a #900000 #ffffff #900000
+    client.focused          #6790EB #6790EB #e5e5e5 #6790EB
+    client.unfocused        #222222 #222222 #aaaaaa #222222
+    client.focused_inactive #222222 #222222 #a9a9a9 #222222
+    client.placeholder      #222222 #222222 #aaaaaa #222222
+    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 
-   client.background       #242424
-
-#Backup of the original colors
-#
-#   client.focused          #3c5beb #3c5bcb #dddddd #3c5bcb
-#   client.unfocused        #000000 #000000 #555555 #292d2e
-#   client.focused_inactive #000000 #000000 #555555 #292d2e
-#   client.placeholder      #000000 #000000 #555555 #292d2e
-#   client.urgent           #2f343a #900000 #ffffff #900000
-#
-#   client.background       #242424
+    client.background       #242424
 
     ##STOP THEMING WM
 
