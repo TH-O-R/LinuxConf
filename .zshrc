@@ -5,7 +5,7 @@
 # Path to your oh-my-zsh installation.
 #installation via script from github
 #export ZSH="/home/$USER/.oh-my-zsh"
-#installation via yay -S oh-my-zsh-git
+#installation via paru -S oh-my-zsh-git
 export ZSH=/usr/share/oh-my-zsh/
 
 # Set name of the theme to load --- if set to "random", it will
@@ -177,6 +177,7 @@ alias fgrep='fgrep --color=auto'
 alias df='df -h'
 
 #keyboard
+setxkbmap -layout us,fr,ara -option "grp:alt_shift_toggle"
 alias give-me-azerty-be="sudo localectl set-x11-keymap be"
 alias give-me-qwerty-us="sudo localectl set-x11-keymap us"
 
@@ -552,6 +553,7 @@ alias personal='cp -Rf /personal/* ~'
 #hyfetch
 export JAVA_HOME=/usr/lib/jvm/adoptium-jdk
 export PATH=$JAVA_HOME/bin:$PATH
+
 
 
 #going through man pages with nvim 
