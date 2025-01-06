@@ -13,6 +13,7 @@ The repository contains the following configuration files and directories:
 
 - **`~/.zshrc`**: Zsh configuration file.
 - **`~/.bashrc`**: Bash configuration file.
+- **`/.config/dwm`**: Configuration files for dwm (needs to be compiled).
 - **`~/.config/hypr/`**: Configuration files for Hyprland, a Wayland compositor.
 - **`~/.config/i3/`**: Configuration files for the i3 window manager.
 - **`~/.config/fasfetch/`**: Configuration files for Fasfetch, a system information fetcher.
