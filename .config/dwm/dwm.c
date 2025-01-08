@@ -2340,7 +2340,7 @@ updatestatus(void)
         if (p) {
             battery_status[strcspn(battery_status, "\n")] = '\0'; // Replace newline char
         }
-        fclose(fp);
+        pclose(fp);
     } else {
         // If the script fails do something
         strcpy(battery_status, "IDK");

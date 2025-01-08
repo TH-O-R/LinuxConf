@@ -37,11 +37,11 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+/*static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};*/
 /* static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII",
  * "VIII", "IX" }; */
-/* static const char *tags[] = { "", "", "", "", "", "",
- * "", "", "" }; */
+ static const char *tags[] = { "", "", "", "", "", "",
+ * "", "", "" }; 
 /* static const char *tags[] = { "Web", "Chat", "Edit", "Meld", "Vb", "Mail",
  * "Video", "Image", "Files" }; */
 
@@ -71,10 +71,13 @@ static const int resizehints =
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    {"[]=", tile}, /* first entry is default */
-    {"HHH", grid}, {"[M]", monocle},
-    {"><>", NULL}, /* no layout function means floating behavior */
-    {NULL, NULL},
+    {"[\\]",      dwindle}, /* first entry is default */
+    {"[@]",       spiral},
+    {"[]=",       tile}, 
+    {"HHH",       grid}, 
+    {"[M]",       monocle},
+    {"><>",       NULL}, /* no layout function means floating behavior */
+    {NULL,        NULL},
 };
 
 /* key definitions */
@@ -102,6 +105,7 @@ static const char *calendar[] = {"gsimplecal", NULL};
 static const char *taskmanager[] = {"xfce4-taskmanager", NULL};
 static const char *firefox[] = {"firefox", NULL};
 static const char *chromium[] = {"chromium", NULL};
+static const char *term[] = {"kitty", NULL};
 
 #include "selfrestart.c"
 #include "shiftview.c"
@@ -112,6 +116,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_Return, spawn, {.v = filecmd}},
     {MODKEY, XK_w, spawn, {.v = firefox}},
     {MODKEY | ShiftMask, XK_w, spawn, {.v = chromium}},
+    {MODKEY, XK_Return, spawn, {.v = term}},
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},

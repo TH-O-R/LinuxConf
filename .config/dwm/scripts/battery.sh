@@ -5,4 +5,4 @@
 battery=$(cat /sys/class/power_supply/BAT0/capacity)
 charging_status=$(cat /sys/class/power_supply/BAT0/status)
 
-echo " [$charging_status > $battery %]"
+echo " [$charging_status $battery%]"
