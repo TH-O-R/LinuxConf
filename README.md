@@ -1,6 +1,6 @@
 # DISCLAIMER !
 
-This repo only servers as my restore point. Anything serious will be put in different repos!
+This repo only serves as my restore point. Anything serious will be put in different repos! (i don't own most of this)
 
 
 ## Dotfiles
@@ -13,7 +13,8 @@ The repository contains the following configuration files and directories:
 
 - **`~/.zshrc`**: Zsh configuration file.
 - **`~/.bashrc`**: Bash configuration file.
-- **`/.config/dwm/`**: Configuration files for dwm (needs to be compiled).
+- **`~/.config/dwm/`**: Configuration files for dwm (needs to be compiled).
+- **`~/.config/chadwm/`**: Configuration files for chadwm a dwm rice.
 - **`~/.config/hypr/`**: Configuration files for Hyprland, a Wayland compositor.
 - **`~/.config/i3/`**: Configuration files for the i3 window manager.
 - **`~/.config/fasfetch/`**: Configuration files for Fasfetch, a system information fetcher.
