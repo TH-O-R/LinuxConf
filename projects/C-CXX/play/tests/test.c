@@ -1,16 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(int argc, char *argv[])
-{
-  FILE *fl = fopen("lol.txt", "w");
+int main(int argc, char *argv[]) {
+  FILE *nigga = fopen("lol.txt", "w");
 
   char msg[] = "\033[H";
-  
-  for (int i=0; i <= 4; i++) {
-    fprintf(fl, "%c", msg[i]);
+
+  for (int i = 0; i <= 4; i++) {
+    fprintf(nigga, "%c", msg[i]);
   }
-  
-  fclose(fl);
+
+  fclose(nigga);
   return 0;
 }

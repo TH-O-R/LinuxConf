@@ -1,4 +1,4 @@
-/* TODO: 
+/* TODO:
  *  -allow users to sign in or sign up
  *  -the password should be hidden
  *  -in case of too many failed attempts lock the user
