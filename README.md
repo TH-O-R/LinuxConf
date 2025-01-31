@@ -14,10 +14,11 @@ The repository contains the following configuration files and directories:
 - **`~/.zshrc`**: Zsh configuration file.
 - **`~/.bashrc`**: Bash configuration file.
 - **`~/.config/dwm/`**: Configuration files for dwm (needs to be compiled).
-- **`~/.config/chadwm/`**: Configuration files for chadwm a dwm rice.
+- **`~/.config/chadwm/`**: Configuration files for chadwm a dwm rice + patches.
 - **`~/.config/hypr/`**: Configuration files for Hyprland, a Wayland compositor.
 - **`~/.config/i3/`**: Configuration files for the i3 window manager.
 - **`~/.config/fasfetch/`**: Configuration files for Fasfetch, a system information fetcher.
+- **`~/.config/nvim/`**: Configuration files for Neovim, a cool IDE/text editor.
 - **`~/.config/kitty/`**: Configuration files for the Kitty terminal emulator.
 - **`~/.config/alacritty/`**: Configuration file for the alacritty terminal emulator.
 - **`~/.config/polybar/`**: Configuration files for Polybar, a status bar.
