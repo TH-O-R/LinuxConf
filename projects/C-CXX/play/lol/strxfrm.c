@@ -3,7 +3,7 @@
 
 int main()
 {
-  char str1[20];
+  char str1[20] = "lololol";
   char *str2 = "youssef";
 
   strxfrm(str1, str2, 3);
