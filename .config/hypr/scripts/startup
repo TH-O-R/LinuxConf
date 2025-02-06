@@ -9,14 +9,14 @@ SCRIPTSDIR=$HOME/.config/hypr/scripts
 # Kill already running process
 _ps=(waybar mako)
 for _prs in "${_ps[@]}"; do
-	if [[ $(pidof ${_prs}) ]]; then
-		killall -9 ${_prs}
-	fi
+    if [[ $(pidof ${_prs}) ]]; then
+        killall -9 ${_prs}
+    fi
 done
 
 # polkit agent
-if [[ ! 'pidof polkit-gnome-authentication-agent-1' ]];then
-	/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+if [[ ! 'pidof polkit-gnome-authentication-agent-1' ]]; then
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 fi
 
 # Apply themes
@@ -26,7 +26,7 @@ ${SCRIPTSDIR}/gtkthemes &
 ${SCRIPTSDIR}/notifications &
 
 # Lauch statusbar (waybar)
-${SCRIPTSDIR}/statusbar &
+# ${SCRIPTSDIR}/statusbar &
 
 # Xauthority
 ${SCRIPTSDIR}/xauthority &

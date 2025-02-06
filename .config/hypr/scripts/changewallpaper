@@ -1,6 +1,9 @@
 #!/bin/bash
 
 DIR=$HOME/.config/hypr/bg
+STYLE=$HOME/.config/hypr/waybar/style.css
+CONFIG=$HOME/.config/hypr/waybar/config.ini
+
 random_wallpaper=$(find $DIR -type f | sort -R | head -1)
 
 # Terminate already running bar instances
@@ -10,4 +13,9 @@ killall -q swaybg
 while pgrep -x swaybg >/dev/null; do sleep 1; done
 
 swaybg -m fill -i $random_wallpaper &
+wal -i $random_wallpaper -s -t &
 notify-send "$random_wallpaper" &
+
+killall -q waybar
+sleep 3
+waybar -c $CONFIG -s $STYLE &
