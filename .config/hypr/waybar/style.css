@@ -1,8 +1,4 @@
-/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
-/* .........................................*/
-/* .............Purpl..................... */
-/* ...................,.................... */
-/* --- 👍 designed by https://github.com/Krautt  👍 --- */
+@import url("/home/akuma/.cache/wal/colors-waybar.css");
 
 * {
 	font-family: "JetBrains Mono Nerd Font";
@@ -15,8 +11,10 @@
 }
 
 window#waybar {
-	background: #100214;
-	color: #cba6f7;
+	/*background: #100214;*/
+	/*color: #cba6f7;*/
+	background: @background;
+	/*color: @background;*/
 }
 
 window#waybar.hidden {
@@ -24,8 +22,9 @@ window#waybar.hidden {
 }
 
 window#waybar.empty {
-	background-color: transparent;
-	background: #100214;
+	/*background-color: transparent;*/
+	/*background: #100214;*/
+	background: @background;
 }
 
 window#waybar.empty #window {
@@ -34,6 +33,7 @@ window#waybar.empty #window {
 	/*  background-color: rgba(66,66,66,0.5); */
 	/* transparent */
 	background-color: transparent;
+	background-color: @background;
 }
 
 tooltip {
@@ -47,9 +47,11 @@ tooltip {
 
 /*-----module groups----*/
 .modules-right {
-	border: 3px solid #20052a;
+	/*border: 3px solid #20052a;*/
+	border: 3px solid @color0;
 	border-radius: 100px 0px 0px 0px;
-	background-color: #3d174b;
+	/*background-color: #3d174b;*/
+	background-color: @color11;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 4px;
@@ -61,20 +63,24 @@ tooltip {
 	padding-bottom: 2px;
 	padding-right: 3px;
 	padding-left: 3px;
-  border: 3px solid #20052a;
+  /*border: 3px solid #20052a;*/
+  border: 3px solid @color0;
   border-radius: 100px 0px 100px 0px;
-  background-color: #3d174b;
+  /*background-color: #3d174b;*/
+  background-color: @color11;
 }
 
 .modules-left {
 	/*background-color: #1e1e2e;*/
-	border: 3px solid #20052a;
+	/*border: 3px solid #20052a;*/
+	border: 3px solid @color0;
 	border-radius: 0px 0px 100px 0px;
-	background-color: #441a53;
+	/*background-color: #441a53;*/
+	background-color: @color11;
 	padding-top: 2px;
 	padding-bottom: 2px;
-	padding-right: 4px;
-	padding-left: 4px;
+	padding-right: 1px;
+	padding-left: 2px;
 }
 
 
@@ -97,7 +103,8 @@ tooltip {
 
 
 #workspaces button {
-	color: #6E6A86;
+	/*color: #6E6A86;*/
+	color: #010101;
   box-shadow: none;
 	text-shadow: none;
   padding: 0px;
@@ -136,6 +143,7 @@ tooltip {
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
+#custom-launcher,
 #custom-pacman,
 #backlight,
 #backlight-slider,
@@ -182,6 +190,7 @@ tooltip {
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
 	color: whitesmoke;
+	/*color: #010101;*/
 	padding-top: 1px;
 	padding-bottom: 1px;
 	padding-right: 6px;
