@@ -177,7 +177,7 @@ alias fgrep='fgrep --color=auto'
 alias df='df -h'
 
 #keyboard
-setxkbmap -layout us,fr,ara -option "grp:alt_shift_toggle"
+setxkbmap -layout us,fr,ara -option "grp:alt_shift_toggle" 2&>1
 alias give-me-azerty-be="sudo localectl set-x11-keymap be"
 alias give-me-qwerty-us="sudo localectl set-x11-keymap us"
 
@@ -551,8 +551,8 @@ alias personal='cp -Rf /personal/* ~'
 #cpufetch
 #colorscript random
 #hyfetch
-export JAVA_HOME=/usr/lib/jvm/adoptium-jdk
-export PATH=$JAVA_HOME/bin:$PATH
+# export JAVA_HOME=/usr/lib/jvm/adoptium-jdk
+# export PATH=$JAVA_HOME/bin:$PATH
 
 
 
@@ -565,3 +565,5 @@ HISTSIZE=5000
 HISTFILESIZE=10000
 
 export MANPAGER='nvim +Man!'
+
+nitch

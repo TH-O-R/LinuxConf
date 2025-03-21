@@ -18,11 +18,11 @@ PS1='\[\e[38;5;25m\][\[\e[38;5;34m\]\u\[\e[0m\]@\[\e[38;5;28m\]\h\[\e[38;5;25m\]
 [[ $- != *i* ]] && return
 
 if [ -d "$HOME/.bin" ]; then
-  PATH="$HOME/.bin:$PATH"
+    PATH="$HOME/.bin:$PATH"
 fi
 
 if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
+    PATH="$HOME/.local/bin:$PATH"
 fi
 
 #ignore upper and lowercase when TAB completion
@@ -48,8 +48,8 @@ alias spsii='sudo pacman -Sii'
 
 # show the list of packages that need this package - depends mpv as example
 function_depends() {
-  search=$(echo "$1")
-  sudo pacman -Sii $search | grep "Required" | sed -e "s/Required By     : //g" | sed -e "s/  /\n/g"
+    search=$(echo "$1")
+    sudo pacman -Sii $search | grep "Required" | sed -e "s/Required By     : //g" | sed -e "s/  /\n/g"
 }
 
 alias depends='function_depends'
@@ -354,27 +354,27 @@ alias boot="sudo /usr/local/bin/arcolinux-boot"
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex() {
-  if [ -f $1 ]; then
-    case $1 in
-    *.tar.bz2) tar xjf $1 ;;
-    *.tar.gz) tar xzf $1 ;;
-    *.bz2) bunzip2 $1 ;;
-    *.rar) unrar x $1 ;;
-    *.gz) gunzip $1 ;;
-    *.tar) tar xf $1 ;;
-    *.tbz2) tar xjf $1 ;;
-    *.tgz) tar xzf $1 ;;
-    *.zip) unzip $1 ;;
-    *.Z) uncompress $1 ;;
-    *.7z) 7z x $1 ;;
-    *.deb) ar x $1 ;;
-    *.tar.xz) tar xf $1 ;;
-    *.tar.zst) tar xf $1 ;;
-    *) echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
+    if [ -f $1 ]; then
+        case $1 in
+        *.tar.bz2) tar xjf $1 ;;
+        *.tar.gz) tar xzf $1 ;;
+        *.bz2) bunzip2 $1 ;;
+        *.rar) unrar x $1 ;;
+        *.gz) gunzip $1 ;;
+        *.tar) tar xf $1 ;;
+        *.tbz2) tar xjf $1 ;;
+        *.tgz) tar xzf $1 ;;
+        *.zip) unzip $1 ;;
+        *.Z) uncompress $1 ;;
+        *.7z) 7z x $1 ;;
+        *.deb) ar x $1 ;;
+        *.tar.xz) tar xf $1 ;;
+        *.tar.zst) tar xf $1 ;;
+        *) echo "'$1' cannot be extracted via ex()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
 }
 
 #wayland aliases
@@ -427,6 +427,16 @@ alias personal='cp -Rf /personal/* ~'
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
+#going through man pages with nvim
+[[ $- != *i* ]] && return
+set -o vi
+
+#alias vim='nvim'
+HISTSIZE=5000
+HISTFILESIZE=10000
+
+export MANPAGER='nvim +Man!'
+
 # reporting tools - install when not installed
 #fastfetch
 #neofetch
@@ -444,3 +454,4 @@ alias personal='cp -Rf /personal/* ~'
 #cpufetch
 #colorscript random
 #hyfetch
+nitch
