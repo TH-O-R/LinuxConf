@@ -33,7 +33,7 @@ window#waybar.empty #window {
 	/*  background-color: rgba(66,66,66,0.5); */
 	/* transparent */
 	background-color: transparent;
-	background-color: @background;
+	/*background-color: @background;*/
 }
 
 tooltip {
