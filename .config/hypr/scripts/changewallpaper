@@ -14,8 +14,8 @@ while pgrep -x swaybg >/dev/null; do sleep 1; done
 
 swaybg -m fill -i $random_wallpaper &
 wal -i $random_wallpaper -s -t &
-notify-send "$random_wallpaper" &
 
 killall -q waybar
+notify-send -h string:x-canonical-private-synchronous:shot-notify -u low -i $random_wallpaper "Random Wallpaper set." &
 sleep 3
 waybar -c $CONFIG -s $STYLE &

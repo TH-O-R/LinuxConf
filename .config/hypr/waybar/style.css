@@ -1,11 +1,14 @@
 @import url("/home/akuma/.cache/wal/colors-waybar.css");
 
 * {
-	font-family: "JetBrains Mono Nerd Font";
-	font-weight: bold;
+	/*font-family: "JetBrains Mono Nerd Font"; Propo */
+	font-family: "Iosevka Heavy";
+	/*font-family: "Hack Bold";*/
+	/*font-weight: bold;*/
 	min-height: 0;		
 	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 97%;
+	/*font-size: 97%;*/
+	font-size: 14px;
 	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 	padding: 1px;
 }
@@ -13,7 +16,8 @@
 window#waybar {
 	/*background: #100214;*/
 	/*color: #cba6f7;*/
-	background: @background;
+	/*background: @background;*/
+    background-color: transparent;
 	/*color: @background;*/
 }
 
@@ -22,9 +26,9 @@ window#waybar.hidden {
 }
 
 window#waybar.empty {
-	/*background-color: transparent;*/
+	background-color: transparent;
 	/*background: #100214;*/
-	background: @background;
+	/*background: @background;*/
 }
 
 window#waybar.empty #window {
@@ -65,7 +69,7 @@ tooltip {
 	padding-left: 3px;
   /*border: 3px solid #20052a;*/
   border: 3px solid @color0;
-  border-radius: 100px 0px 100px 0px;
+  border-radius: 30px 0px 30px 0px;
   /*background-color: #3d174b;*/
   background-color: @color11;
 }
@@ -74,7 +78,7 @@ tooltip {
 	/*background-color: #1e1e2e;*/
 	/*border: 3px solid #20052a;*/
 	border: 3px solid @color0;
-	border-radius: 0px 0px 100px 0px;
+	border-radius: 0px 0px 30px 0px;
 	/*background-color: #441a53;*/
 	background-color: @color11;
 	padding-top: 2px;
@@ -136,7 +140,7 @@ tooltip {
 
 #workspaces button:hover {
 	color: #9CCFD8;
-  border-radius: 10px;
+  border-radius: 40px;
  	padding-left: 2px;
   padding-right: 2px;
   animation: gradient_f 20s ease-in infinite;
@@ -190,12 +194,20 @@ tooltip {
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
 	color: whitesmoke;
+	/*color: black;*/
 	/*color: #010101;*/
 	padding-top: 1px;
 	padding-bottom: 1px;
 	padding-right: 6px;
 	padding-left: 6px;
 
+}
+
+#custom-launcher {
+	font-weight: bold;
+	min-height: 0;		
+	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+	font-size: 140%;
 }
 
 #temperature.critical {
