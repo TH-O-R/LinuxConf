@@ -8,6 +8,7 @@
 //                    /*********************************************/
 
 #include <stdio.h>
+#include <string.h>
 
 int SAVE_PLAYERS() {
   int com_nb; // number of computer players
@@ -48,8 +49,7 @@ int PLAYER_CHOICE() {
 }
 
 int main() {
-  int choice[3] = {1, 2,
-                   3}; // 1 will be rock 2 will be paper and 3 will be scissor
+  int choice[3] = {1, 2, 3}; // 1 will be rock 2 will be paper and 3 will be scissor
 
   printf("WELCOME TO THE GREATEST ROCK PAPER SCISSORS GAME EVER!\n");
 
